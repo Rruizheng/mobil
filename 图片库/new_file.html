@@ -5,7 +5,7 @@
 		<title>图片库</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="animate.css"/>
-		<script src="zeptojs.min-v1.2.0.js"></script>
+		<script src="zepto.min.js"></script>
 		<style type="text/css">
 		blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,img{
 			margin: 0;
@@ -66,15 +66,15 @@ var render = function(){
 			var h = this.height;
 			var winWidth = zWin.width();
 			var winHeight = zWin.height();
-			var realW= parseInt(winHeigt/h*w);
-			var realH = parseInt(winWidht/w*h);
+			var realW= parseInt(winHeight/h*w);
+			var realH = parseInt(winWidth/w*h);
 			var paddingLeft = parseInt((winWidth-realW)/2);
 			var paddingTop = parseInt((winHeight-realH)/2);
 			
 			if(h/w>1.2){
-				wImg.css('height',winHeight).attr('src',imgSrc).css('padding-left',paddingLeft);
+				wImg.css('height',winHeight).attr('src',imgSrc).css('padding-left',paddingLeft+'px');
 			}else{
-				wImg.css('width',winWidth).attr('src',imgSrc).css('padding-top',paddingTop);
+				wImg.css('width',winWidth).attr('src',imgSrc).css('padding-top',paddingTop+'px');
 			}
 		}
 	}
